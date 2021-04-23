@@ -22,10 +22,63 @@
 	
 	<update id="update" parameterType="blogVo">
 	<![CDATA[
-		UPDATE blog
-		SET blogTitle=#{blogTitle}
-		WHERE userNo = #{userNo}
+	UPDATE blog
+	SET (blogTitle,logoFile)= (SELECT blogTitle, logoFile 
+	FROM blog 
+	WHERE userNo = #{userNo})
+
 	]]>
 	</update>
+	
+	<!-- ##################################################### -->
+	
+	<select id="getCategory" parameterType = "Long" resultType = "cateVo">
+	<![CDATA[
+	SELECT cateName, userNo ,cateNo, description, regDate
+	FROM category
+	WHERE userNo = #{value}
+	]]>
+	</select>
+	
+	<insert id="insertCate" parameterType="cateVo">
+	<![CDATA[
+	INSERT INTO category
+	VALUES(seq_category_no.nextval, #{userNo}, #{cateName}, #{description}, sysdate)
+	]]>
+	</insert>
+	
+	<!-- ####################################################### -->
+	
+	<select id="getPost" parameterType="Long" resultType="postVo">
+	<![CDATA[
+	SELECT postTitle, postContent, post.regDate as regDate, post.cateNo
+	FROM post, category
+	WHERE category.userNo = ${value} AND post.cateNo = category.cateNo
+	]]>
+	</select>
+	
+	<insert id="post" parameterType="postVo">
+	<![CDATA[
+	INSERT INTO post
+	VALUES(seq_post_no.nextval, #{cateNo}, #{postTitle}, #{postContent}, sysdate)
+	]]>
+	</insert>
+	
+	<select id="getMain" parameterType="String" resultType="memberVo">
+	<![CDATA[
+	SELECT userNo, userName, id
+	FROM users
+	WHERE id = #{value}
+	]]>
+	</select>
+	
+	<!-- ######################################################### -->
+	<delete id="delete"
+		parameterType="Long">
+	<![CDATA[
+	DELETE FROM category
+	WHERE userNo = #{value} 
+	]]>	
+	</delete>
 	
 </mapper>

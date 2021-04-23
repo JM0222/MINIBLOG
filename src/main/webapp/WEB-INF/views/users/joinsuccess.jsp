@@ -7,6 +7,12 @@
 <head>
 <meta charset="UTF-8">
 <title>jblog</title>
+<style>
+html{
+	background-image: url("../img/1.png");
+	background-color:black;
+	}
+</style>
 </head>
 <body>
 	<div id="container">

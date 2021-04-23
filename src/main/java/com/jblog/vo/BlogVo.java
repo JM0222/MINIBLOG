@@ -4,7 +4,7 @@ public class BlogVo {
 	private Long userNo;
 	private String blogTitle;
 	private String logoFile;
-	
+
 
 
 	public BlogVo() {
@@ -28,6 +28,7 @@ public class BlogVo {
 	public void setLogoFile(String logoFile) {
 		this.logoFile = logoFile;
 	}
+
 
 	@Override
 	public String toString() {

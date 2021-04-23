@@ -7,12 +7,13 @@
 	<typeAliases>
 		<typeAlias alias="memberVo"
 			type="com.jblog.vo.MemberVo"/>
-		<!-- <typeAlias alias="guestbookVo" 
-		type="com.bitacademy.myportal.vo.GuestbookVo" /> 
-		<typeAlias alias="boardVo"
-			type="com.jblog.vo.MemberVo"/> -->
+			
+		<typeAlias alias="postVo"
+			type="com.jblog.vo.PostVo"/> 
+			
  		<typeAlias alias="blogVo"
 			type="com.jblog.vo.BlogVo"/> 
+			
 		<typeAlias alias="cateVo"
 			type="com.jblog.vo.CateVo"/>
 	</typeAliases>

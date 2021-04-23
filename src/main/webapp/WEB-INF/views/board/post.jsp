@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>설정</title>
+<title>글작성</title>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
 <style>
@@ -21,46 +21,71 @@ html{
  	background-repeat: no-repeat; 
  	background-size: cover;
 	}
-input[type="submit"]{
-		height:65px;
-		color:black;
-		margin-left:25px;
-		horizontal-align:left;
-	}
-	a{
+a{
 	display:flex;
 	justify-content:center;
 	text-align:center;
-	}
-	form{
-	margin-left:200px;
-	font-size:2em;
-	}
-	h1{
-	font-size:2.5em;
+}
+#section{
+	display:flex;
+	justify-content:center;
 	text-align:center;
-	}
-	input{
-color:black;
+
+}
+input {
+	color:black;
+}
+option {
+	color:black;
+}
+select {
+	color:black;
+}
+td {
+	text-align:center;
+	background:black;
+}
+textarea {
+	color:black;
 }
 
-	
 </style>
 </head>
 <body>
-</div>
-	<h1> ${vo.getBlogTitle()}</h1>
 	<a href = "<c:url value="basic"/>">기본설정</a>
 	<a href = "<c:url value="category"/>">카테고리 설정</a>
 	<a href="<c:url value="post"/>">글작성</a>
-	<form method="POST" action="update"
-	enctype="multipart/form-data">
-		<label for = "titlename">블로그제목</label>
-		<input type= "text" name="blogTitle" value="${vo.getBlogTitle()}">
-		<input id="userNo" name="userNo" type="hidden" value="${vo.getUserNo() }">
-		<label>파일</label>
-		<input type="file" name="uploadfile"><br>
-		<input type ="submit" value="기본설정 변경하기">
+	
+	
+	<form method = "post">
+		<table border = "1" width="1200">
+			<tr>
+				<td>제목</td>
+				<td>
+					<input type="text" name = "postTitle" style=width:1100px;>
+				</td>
+			</tr>
+			<tr >
+				<td>내용</td>
+				<td>
+					<textarea id = "postContent" name = "postContent" style=width:1100px;></textarea>
+				</td>
+			</tr>
+			<div id="section">
+			<h2>카테고리</h2>
+			<select id = "cateNo" name ="cateNo">
+				<c:forEach items="${list}" var="cateVo">
+					<option value = "${cateVo.getCateNo()}">${cateVo.getCateName()}
+					</option>
+				</c:forEach>
+			</select>
+			
+				<input type="submit" value="포스트 하기">
+			</div>
+		
+		
+		
+		</table>
 	</form>
 </body>
 </html>

@@ -11,14 +11,46 @@
 <script src="<c:url value="/assets/javascript/jquery/jquery-3.6.0.js"/>"></script>
 <!-- 스크립트 삽입 -->
 <script src="<c:url value="/assets/javascript/jquery/members.js"/>"></script>
+<style>
+	html{
+	background-image: url("../img/1.png");
+	}
+	input[type="text"], input[type="password"]{
+		display:flex;
+		justify-content:center;
+		text-align:center;
+	}
+	input[type="submit"]{
+		height:50px;
+		color:black;
+
+	}
+	input{
+		color:black;
+	}
+	input[type="button"]{
+		height:50px;
+		vertical-align:bottom;
+		color:black;
+		
+	}
+	
+	input:hover, textarea:hover,
+	input:focus, textarea:focus {
+    background-color:#BDB3B1;
+	}
+	#content{
+		border:1px solid white;
+	}
+</style>
 </head>
 <body>
 	<div id="container">
 		<jsp:include page="/WEB-INF/views/includes/header.jsp"/>
 		<div id="wrapper">
 			<div id="content">
-	<h1>조인폼입니다</h1>
 	
+	<h1>회원가입</h1>
 	<form
 		id="join-form"
 		name="registerForm" 
@@ -27,7 +59,7 @@
 		>
 		<input type="hidden" name="check" value="f">
 		<input type="hidden" name="a" value="join">
-		<input type="hidden" name="blogTitle" value="널값">
+		<input type="hidden" name="blogTitle" value="기본카테고리입니다">
 		
 		<label for="name">이름</label>
 		<input name="userName" type="text" placeholder="이름을 입력하십시오"><br>
@@ -45,7 +77,7 @@
 		<input type="button" 
 			value="아이디 중복 체크"
 			onclick="checkid(this.form.id,
-			 '<c:url value="/members/idcheck" />')" /><br>
+			 '<c:url value="/members/idcheck" />')" />
 		<input type="submit" value="전송">
 		<!--  input type="button" value="폼 검증" onclick="checkForm(this.form)" --> 
 	
