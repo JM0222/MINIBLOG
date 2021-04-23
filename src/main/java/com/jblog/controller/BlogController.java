@@ -83,6 +83,7 @@ public class BlogController {
 			boolean success = blogServiceImpl.insert(insertVo);
 			return "redirect:/{id}";
 	}
+	
 	@RequestMapping(value="{id}/admin/delete",
 			method = RequestMethod.POST)
 	public String adminDeleteAction(@RequestParam("no") Long no,

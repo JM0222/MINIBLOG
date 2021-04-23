@@ -60,6 +60,7 @@
 		<input type="hidden" name="check" value="f">
 		<input type="hidden" name="a" value="join">
 		<input type="hidden" name="blogTitle" value="기본카테고리입니다">
+		<input type="hidden" name="logoFile" value="data">
 		
 		<label for="name">이름</label>
 		<input name="userName" type="text" placeholder="이름을 입력하십시오"><br>

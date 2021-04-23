@@ -37,6 +37,7 @@ public class MemberServiceController {
 			BlogVo blogVo, CateVo cateVo) {
 		System.out.println("폼전송된 데이터"+ memberVo);
 		System.out.println("폼전송된 데이터2"+ blogVo);
+		System.out.println("폼전송된 데이터3"+ cateVo);
 		boolean success = memberService.join(memberVo);
 		if (success) {
 			memberService.joinBlog(blogVo);

@@ -27,6 +27,9 @@ input[type="submit"]{
 		margin-left:25px;
 		horizontal-align:left;
 	}
+	input[type="file"]{
+		color:white;
+	}
 	a{
 	display:flex;
 	justify-content:center;
@@ -56,7 +59,7 @@ color:black;
 	<form method="POST" action="update"
 	enctype="multipart/form-data">
 		<label for = "titlename">블로그제목</label>
-		<input type= "text" name="blogTitle" value="${vo.getBlogTitle()}">
+		<input type= "text" name="blogTitle" value="${vo.getBlogTitle()}"><br>
 		<input id="userNo" name="userNo" type="hidden" value="${vo.getUserNo() }">
 		<label>파일</label>
 		<input type="file" name="uploadfile"><br>

@@ -35,10 +35,9 @@ public class MainController {
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public String bloghome(@PathVariable("id") String id,
-			HttpSession session, Model model) {
-		BlogVo vo = blogServiceImpl.getBlogId(id);
+			 Model model) {
+		BlogVo vo = blogServiceImpl.getMain(id);
 		model.addAttribute("vo", vo);
-		System.out.println(vo);
 		
 		List<PostVo> postList = blogServiceImpl.getPost(vo.getUserNo());
 		model.addAttribute("postList", postList);

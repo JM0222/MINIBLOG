@@ -31,9 +31,9 @@
 	</selectKey>
 	<![CDATA[
 	INSERT INTO category (
-		cateNo, userNo, cateName)
+		cateNo, userNo, cateName, regDate)
 	VALUES(
-		seq_category_no.nextval,#{userNo}, '기본카테고리입니다')
+		seq_category_no.nextval,#{userNo}, '기본카테고리입니다', sysdate)
 	]]>
 	
 	</insert>

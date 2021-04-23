@@ -83,12 +83,12 @@ html{
 		<tr>
 			<td>${vo.getCateNo()}</td>
 			<td>${vo.getCateName()}</td>
-			<td>???</td>
+			<td>1</td>
 			<td>${vo.getDescription()}</td>
 			<td>${vo.getRegDate()}</td>
 			<td>
 				<form method="POST" action="<c:url value="delete"/>">
-					<input type="hidden" name = "no" value= "${vo.getCateNo()}">
+					<input type='hidden' name="no" value="${vo.getCateNo()}">
 					<input type="submit" value="삭제">
 				</form>
 			</td>

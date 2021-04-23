@@ -77,7 +77,7 @@
 		parameterType="Long">
 	<![CDATA[
 	DELETE FROM category
-	WHERE userNo = #{value} 
+	WHERE cateNo = #{value} 
 	]]>	
 	</delete>
 	
