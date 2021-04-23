@@ -23,9 +23,13 @@ html{
 	}
 input[type="submit"]{
 		height:65px;
+		width:600px;
 		color:black;
 		margin-left:25px;
-		horizontal-align:left;
+	}
+	input[type="submit"]:hover{
+		background:black;
+		color:white;
 	}
 	input[type="file"]{
 		color:white;
@@ -34,6 +38,7 @@ input[type="submit"]{
 	display:flex;
 	justify-content:center;
 	text-align:center;
+	text-decoration:none;
 	}
 	form{
 	margin-left:200px;
@@ -45,6 +50,9 @@ input[type="submit"]{
 	}
 	input{
 color:black;
+}
+a:hover{
+	color:skyblue;
 }
 
 	
@@ -59,11 +67,11 @@ color:black;
 	<form method="POST" action="update"
 	enctype="multipart/form-data">
 		<label for = "titlename">블로그제목</label>
-		<input type= "text" name="blogTitle" value="${vo.getBlogTitle()}"><br>
+		<input type= "text" name="blogTitle" value="${vo.getBlogTitle()}">
+		<input type ="submit" value="기본설정 변경하기"><br>
 		<input id="userNo" name="userNo" type="hidden" value="${vo.getUserNo() }">
 		<label>파일</label>
-		<input type="file" name="uploadfile"><br>
-		<input type ="submit" value="기본설정 변경하기">
+		<input type="file" name="uploadfile">
 	</form>
 </body>
 </html>

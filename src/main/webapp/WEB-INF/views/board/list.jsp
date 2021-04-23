@@ -29,7 +29,7 @@ display:flex;
 	justify-content:center;
 	text-align:center;}
 #section1{
-border:3px solid white;
+	border:3px solid white;
 	display:flex;
 	justify-content:center;
 	text-align:center;
@@ -42,12 +42,27 @@ border:3px solid white;
 input{
 color:black;
 }
+img{
+border-radius:30px;
+float:left;
+width:30%;
+}
+input[type="submit"]:hover{
+		background:black;
+		color:white;
+	}
+	a:hover{
+		color:skyblue;
+	}
+	a{
+	text-decoration:none;
+	}
 </style>
 </head>
 
 <body>
-	<img src="${vo.getLogoFile()}">
 	<div id=section1>
+	<img src="${pageContext.request.contextPath}/${vo.getLogoFile()}">
 	<h1> ${authUser.id}의 블로그입니다</h1>
 	<h2> ${vo.getBlogTitle() }</h2>
 

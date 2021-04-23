@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <title>jblog</title>
 <style>
+
 html{
 	background-image: url("img/1.png");
 	}
@@ -42,6 +43,16 @@ button{
 button:hover{
 background-color:#534B4B;
 }
+a{
+	text-decoration:none;
+	}
+	a:hover{
+		color:skyblue;
+	}
+	input[type="submit"]:hover,input[type="button"]:hover{
+		background:black;
+		color:white;
+	}
 
 </style>
 

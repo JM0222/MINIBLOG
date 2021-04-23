@@ -29,6 +29,16 @@
 	input:focus, textarea:focus {
     background-color:#BDB3B1;
 	}
+	a{
+	text-decoration:none;
+	}
+	a:hover{
+		color:skyblue;
+	}
+	input[type="submit"]:hover,input[type="button"]:hover{
+		background:black;
+		color:white;
+	}
 
 		
 	

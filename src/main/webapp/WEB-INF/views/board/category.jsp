@@ -24,10 +24,19 @@ html{
 		color:black;
 		justify-content:center;
 	}
+	input[type="submit"]:hover{
+		background:black;
+		color:white;
+	}
+	a:hover{
+		color:skyblue;
+	}
+
 	a{
 	display:flex;
 	text-align:center;
 	justify-content:center;
+	text-decoration:none;
 	}
 	input{
 		color:black;

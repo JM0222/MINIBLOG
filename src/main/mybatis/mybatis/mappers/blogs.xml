@@ -22,13 +22,12 @@
 	
 	<update id="update" parameterType="blogVo">
 	<![CDATA[
-	UPDATE blog
-	SET (blogTitle,logoFile)= (SELECT blogTitle, logoFile 
-	FROM blog 
-	WHERE userNo = #{userNo})
-
+		UPDATE blog
+			SET blogTitle=#{blogTitle}, logoFile = #{logoFile}
+			WHERE userNo = #{userNo}
 	]]>
 	</update>
+
 	
 	<!-- ##################################################### -->
 	

@@ -25,11 +25,16 @@ a{
 	display:flex;
 	justify-content:center;
 	text-align:center;
+	text-decoration:none;
+}
+a:hover{
+	color:skyblue;
 }
 #section{
 	display:flex;
 	justify-content:center;
 	text-align:center;
+	text-decoraion:none;
 
 }
 input {
@@ -48,6 +53,10 @@ td {
 textarea {
 	color:black;
 }
+input[type="submit"]:hover{
+		background:black;
+		color:white;
+	}
 
 </style>
 </head>

@@ -42,6 +42,16 @@
 	#content{
 		border:1px solid white;
 	}
+	input[type="submit"]:hover,input[type="button"]:hover{
+		background:black;
+		color:white;
+	}
+	a{
+	text-decoration:none;
+	}
+	a:hover{
+		color:skyblue;
+	}
 </style>
 </head>
 <body>
