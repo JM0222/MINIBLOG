@@ -44,15 +44,32 @@ button:hover{
 background-color:#534B4B;
 }
 a{
-	text-decoration:none;
+text-decoration:none;
+}
+a:hover{
+	color:skyblue;
+}
+input[type="submit"]:hover,input[type="button"]:hover{
+	background:black;
+	color:white;
+}
+h1{
+animation: h1Ani;
+animation-duration: 1.5s;
+}
+@keyframes h1Ani
+{
+	0%
+	{
+		transform: scale(1.0);
+		opacity: 0;
 	}
-	a:hover{
-		color:skyblue;
+	100%
+	{
+		transform: scale(2.0);
+		opacity: 1;
 	}
-	input[type="submit"]:hover,input[type="button"]:hover{
-		background:black;
-		color:white;
-	}
+}
 
 </style>
 
