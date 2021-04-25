@@ -84,13 +84,13 @@
 		<input type="radio" name="ag" value="ok" checked>YES</radio>
 		<input type="radio" name="ag" value="no">NO</radio><br>
 		
-		<!-- 이메일 체크 버튼 -->
+		<!-- 이메일 중복 체크 -->
 		<input type="button" 
 			value="아이디 중복 체크"
 			onclick="checkid(this.form.id,
 			 '<c:url value="/members/idcheck" />')" />
 		<input type="submit" value="전송">
-		<!--  input type="button" value="폼 검증" onclick="checkForm(this.form)" --> 
+
 	
 	</form>
 	
